@@ -929,4 +929,164 @@ textarea.form-control {
   .about-grid, .operations-grid, .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand-logo-img {
+    height: 40px;
+  }
+
+  .navbar.scrolled .brand-logo-img {
+    height: 36px;
+  }
+
+  .nav__actions .btn {
+    padding: 0.6rem 0.95rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 2.5rem);
+    padding-bottom: 3.5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .hero__description {
+    font-size: 1.05rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero__buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+  }
+
+  .service-card__body {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+
+  .service-card__body .btn {
+    width: 100%;
+  }
+
+  .about-card-box {
+    padding: 1.5rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .operation-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .operation-item__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .operation-item__title {
+    font-size: 1.15rem;
+  }
+
+  .industry-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .sustainability-banner__content {
+    position: relative;
+    padding: 2rem 1.25rem;
+    background: var(--clr-forest-dark);
+  }
+
+  .sustainability-banner__img {
+    height: 180px;
+  }
+
+  .sustainability-banner__pillars {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .contact-info-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .contact-item__value {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+
+  .modal-container {
+    padding: 1.5rem 1.25rem;
+    margin: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .toast {
+    left: 15px;
+    right: 15px;
+    bottom: 85px;
+    max-width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__actions .btn {
+    display: none;
+  }
+
+  .hero__badge {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .heading-title {
+    font-size: 2rem;
+  }
 }
